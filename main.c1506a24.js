@@ -1647,10 +1647,8 @@ function random(seed) {
                 t = new Date(a).setHours(0, 0, 0, 0) - s.setHours(0, 0, 0, 0);
             return Math.round(t / 864e5);
         }
-        function Da(e) {
-            var a,
-                s = Ga(e);
-            return (a = s % La.length), La[a];
+        function Da() {
+            return La[Math.floor(Math.random() * La.length)];
         }
         function Ga(e) {
             return Na(Ha, e);
@@ -1758,39 +1756,23 @@ function random(seed) {
                     var o = za();
                     return (
                         (e.lastPlayedTs = o.lastPlayedTs),
-                        !e.lastPlayedTs ||
-                        Na(new Date(e.lastPlayedTs), e.today) >= 1
-                            ? ((e.boardState = new Array(10).fill("")),
-                              (e.evaluations = new Array(10).fill(null)),
-                              (e.solution = Da(e.today)),
-                              (e.dayOffset = Ga(e.today)),
-                              (e.lastCompletedTs = o.lastCompletedTs),
-                              (e.hardMode = o.hardMode),
-                              (e.restoringFromLocalStorage = !1),
-                              ja({
-                                  rowIndex: e.rowIndex,
-                                  boardState: e.boardState,
-                                  evaluations: e.evaluations,
-                                  solution: e.solution,
-                                  gameStatus: e.gameStatus,
-                              }),
-                              Ca("event", "level_start", {
-                                  level_name: Wa(e.solution),
-                              }))
-                            : ((e.boardState = o.boardState),
-                              (e.evaluations = o.evaluations),
-                              (e.rowIndex = o.rowIndex),
-                              (e.solution = o.solution),
-                              (e.dayOffset = Ga(e.today)),
-                              (e.letterEvaluations = $a(
-                                  e.boardState,
-                                  e.evaluations
-                              )),
-                              (e.gameStatus = o.gameStatus),
-                              (e.lastCompletedTs = o.lastCompletedTs),
-                              (e.hardMode = o.hardMode),
-                              e.gameStatus !== Za && (e.canInput = !1),
-                              (e.restoringFromLocalStorage = !0)),
+                        (e.boardState = new Array(10).fill("")),
+                        (e.evaluations = new Array(10).fill(null)),
+                        (e.solution = Da()),
+                        (e.dayOffset = Ga(e.today)),
+                        (e.lastCompletedTs = o.lastCompletedTs),
+                        (e.hardMode = o.hardMode),
+                        (e.restoringFromLocalStorage = !1),
+                        ja({
+                            rowIndex: e.rowIndex,
+                            boardState: e.boardState,
+                            evaluations: e.evaluations,
+                            solution: e.solution,
+                            gameStatus: e.gameStatus,
+                        }),
+                        Ca("event", "level_start", {
+                            level_name: Wa(e.solution),
+                        }),
                         e
                     );
                 }
@@ -3041,17 +3023,8 @@ function random(seed) {
               </div>
             </div>`;
         var Is = document.createElement("template");
-        Is.innerHTML = `<div class="countdown">
-              <h1>Siguiente NUMBERLE</h1>
-              <div id="timer">
-                <div class="statistic-container">
-                  <div class="statistic timer">
-                    <countdown-timer></countdown-timer>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="buttons" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;">
+        Is.innerHTML = `<div class="buttons" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; width: 100%;">
+                <button id="new-game-button" style="background-color: var(--key-bg-correct); color: var(--key-evaluated-text-color); font-family: inherit; font-weight: bold; border-radius: 4px; cursor: pointer; border: none; user-select: none; display: flex; justify-content: center; align-items: center; text-transform: uppercase; -webkit-tap-highlight-color: rgba(0,0,0,0.3); width: 152px; font-size: 20px; height: 52px; -webkit-filter: brightness(100%);" onclick="window.location.reload()">Nuevo Juego</button>
                 <div class="share">
                     <button id="share-button">Compartir <game-icon icon="share"></game-icon>
                     </button>
