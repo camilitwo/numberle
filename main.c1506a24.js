@@ -1401,8 +1401,8 @@ function random(seed) {
               <section>
                 <div class="setting">
                   <div class="text">
-                    <div class="title">Hard Mode</div>
-                    <div class="description">Any revealed hints must be used in subsequent guesses</div>
+                    <div class="title">Modo difícil</div>
+                    <div class="description">Cualquier pista revelada debe usarse en intentos posteriores</div>
                   </div>
                   <div class="control">
                     <game-switch id="hard-mode" name="hard-mode"></game-switch>
@@ -1410,7 +1410,7 @@ function random(seed) {
                 </div>
                 <div class="setting">
                   <div class="text">
-                    <div class="title">Dark Theme</div>
+                    <div class="title">Tema oscuro</div>
                   </div>
                   <div class="control">
                     <game-switch id="dark-theme" name="dark-theme"></game-switch>
@@ -1418,8 +1418,8 @@ function random(seed) {
                 </div>
                 <div class="setting">
                   <div class="text">
-                    <div class="title">Color Blind Mode</div>
-                    <div class="description">High contrast colors</div>
+                    <div class="title">Modo daltónico</div>
+                    <div class="description">Colores de alto contraste</div>
                   </div>
                   <div class="control">
                     <game-switch id="color-blind-theme" name="color-blind-theme"></game-switch>
@@ -1429,7 +1429,7 @@ function random(seed) {
             </div>
             <div id="footnote">
               <a href="https://www.buymeacoffee.com/dduarte" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-              <div id="copyright">Wordle is the work of Josh Wardle</div>
+              <div id="copyright">Wordle es obra de Josh Wardle</div>
               <div>
                 <div id="puzzle-number"></div>
                 <div id="hash"></div>
@@ -1672,7 +1672,7 @@ function random(seed) {
             Ua = {
                 currentStreak: 0,
                 maxStreak: 0,
-                guesses: n({ 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 }, Ja, 0),
+                guesses: n({ 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0 }, Ja, 0),
                 winPercentage: 0,
                 gamesPlayed: 0,
                 gamesWon: 0,
@@ -1715,21 +1715,21 @@ function random(seed) {
                 .concat(1e3, ";\n  }\n  #system-toaster {\n    z-index: ")
                 .concat(
                     4e3,
-                    ';\n  }\n\n  #game {\n    width: 100%;\n    max-width: var(--game-max-width);\n    margin: 0 auto;\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n  }\n  header {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    height: var(--header-height);\n    color: var(--color-tone-1);\n    border-bottom: 1px solid var(--color-tone-4);\n  }\n  header .title {\n    font-weight: 700;\n    font-size: 36px;\n    letter-spacing: 0.2rem;\n    text-transform: uppercase;\n    text-align: center;\n    position: absolute;\n    left: 0;\n    right: 0;\n    pointer-events: none;\n  }\n\n  @media (max-width: 360px) {\n    header .title {\n      font-size: 22px;\n      letter-spacing: 0.1rem;\n    }\n  }\n\n  #board-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-grow: 1;\n    overflow: hidden;\n  }\n  #board {\n    display: grid;\n    grid-template-rows: repeat(6, 1fr);\n    grid-gap: 5px;\n    padding:10px;\n    box-sizing: border-box;\n  }\n  button.icon {\n    background: none;\n    border: none;\n    cursor: pointer;\n    padding: 0 4px;\n  }\n\n  #debug-tools {\n    position: absolute;\n    bottom: 0;\n  }\n\n  </style>\n  <game-theme-manager>\n    <div id="game">\n      <header>\n        <div class="menu">\n          <button id="help-button" class="icon" aria-label="help">\n            <game-icon icon="help"></game-icon>\n          </button>\n        </div>\n        <div class="title">\n         NUMBERLE\n        </div>\n        <div class="menu">\n          <button id="statistics-button" class="icon" aria-label="statistics">\n            <game-icon icon="statistics"></game-icon>\n          </button>\n          <button id="settings-button" class="icon" aria-label="settings">\n            <game-icon icon="settings"></game-icon>\n          </button>\n        </div>\n      </header>\n        <div id="board-container">\n          <div id="board"></div>\n        </div>\n        <game-keyboard></game-keyboard>\n        <game-modal></game-modal>\n        <game-page></game-page>\n        <div class="toaster" id="game-toaster"></div>\n        <div class="toaster" id="system-toaster"></div>\n    </div>\n  </game-theme-manager>\n  <div id="debug-tools"></div>\n'
+                    ';\n  }\n\n  #game {\n    width: 100%;\n    max-width: var(--game-max-width);\n    margin: 0 auto;\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n  }\n  header {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    height: var(--header-height);\n    color: var(--color-tone-1);\n    border-bottom: 1px solid var(--color-tone-4);\n  }\n  header .title {\n    font-weight: 700;\n    font-size: 36px;\n    letter-spacing: 0.2rem;\n    text-transform: uppercase;\n    text-align: center;\n    position: absolute;\n    left: 0;\n    right: 0;\n    pointer-events: none;\n  }\n\n  @media (max-width: 360px) {\n    header .title {\n      font-size: 22px;\n      letter-spacing: 0.1rem;\n    }\n  }\n\n  #board-container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-grow: 1;\n    overflow: hidden;\n  }\n  #board {\n    display: grid;\n    grid-template-rows: repeat(10, 1fr);\n    grid-gap: 5px;\n    padding:10px;\n    box-sizing: border-box;\n  }\n  button.icon {\n    background: none;\n    border: none;\n    cursor: pointer;\n    padding: 0 4px;\n  }\n\n  #debug-tools {\n    position: absolute;\n    bottom: 0;\n  }\n\n  </style>\n  <game-theme-manager>\n    <div id="game">\n      <header>\n        <div class="menu">\n          <button id="help-button" class="icon" aria-label="ayuda">\n            <game-icon icon="help"></game-icon>\n          </button>\n        </div>\n        <div class="title">\n         NUMBERLE\n        </div>\n        <div class="menu">\n          <button id="statistics-button" class="icon" aria-label="estadísticas">\n            <game-icon icon="statistics"></game-icon>\n          </button>\n          <button id="settings-button" class="icon" aria-label="configuración">\n            <game-icon icon="settings"></game-icon>\n          </button>\n        </div>\n      </header>\n        <div id="board-container">\n          <div id="board"></div>\n        </div>\n        <game-keyboard></game-keyboard>\n        <game-modal></game-modal>\n        <game-page></game-page>\n        <div class="toaster" id="game-toaster"></div>\n        <div class="toaster" id="system-toaster"></div>\n    </div>\n  </game-theme-manager>\n  <div id="debug-tools"></div>\n'
                 );
         var Qa = document.createElement("template");
         Qa.innerHTML =
-            '\n<button id="reveal">reveal</button>\n<button id="shake">shake</button>\n<button id="bounce">bounce</button>\n<button id="toast">toast</button>\n<button id="modal">modal</button>\n';
+            '\n<button id="reveal">revelar</button>\n<button id="shake">sacudir</button>\n<button id="bounce">rebotar</button>\n<button id="toast">aviso</button>\n<button id="modal">modal</button>\n';
         var Za = "IN_PROGRESS",
             es = "WIN",
             as = "FAIL",
             ss = [
-                "Genius",
-                "Magnificent",
-                "Impressive",
-                "Splendid",
-                "Great",
-                "Phew",
+                "Genial",
+                "Magnífico",
+                "Impresionante",
+                "Espléndido",
+                "¡Bien!",
+                "Uf",
             ],
             ts = (function (e) {
                 r(t, e);
@@ -1760,8 +1760,8 @@ function random(seed) {
                         (e.lastPlayedTs = o.lastPlayedTs),
                         !e.lastPlayedTs ||
                         Na(new Date(e.lastPlayedTs), e.today) >= 1
-                            ? ((e.boardState = new Array(6).fill("")),
-                              (e.evaluations = new Array(6).fill(null)),
+                            ? ((e.boardState = new Array(10).fill("")),
+                              (e.evaluations = new Array(10).fill(null)),
                               (e.solution = Da(e.today)),
                               (e.dayOffset = Ga(e.today)),
                               (e.lastCompletedTs = o.lastCompletedTs),
@@ -1801,7 +1801,7 @@ function random(seed) {
                             value: function () {
                                 if (
                                     5 === this.tileIndex &&
-                                    !(this.rowIndex >= 6)
+                                    !(this.rowIndex >= 10)
                                 ) {
                                     var e,
                                         a =
@@ -1816,7 +1816,7 @@ function random(seed) {
                                         return (
                                             a.setAttribute("invalid", ""),
                                             void this.addToast(
-                                                "Not in number list"
+                                                "No está en la lista de números"
                                             )
                                         );
                                     if (this.hardMode) {
@@ -1890,7 +1890,7 @@ function random(seed) {
                                                 a.setAttribute("invalid", ""),
                                                 void this.addToast(
                                                     n ||
-                                                        "Not valid in hard mode"
+                                                        "No es válido en modo difícil"
                                                 )
                                             );
                                     }
@@ -1934,7 +1934,7 @@ function random(seed) {
                                         (a.evaluation =
                                             this.evaluations[this.rowIndex]),
                                         (this.rowIndex += 1);
-                                    var i = this.rowIndex >= 6,
+                                    var i = this.rowIndex >= 10,
                                         l = r.every(function (e) {
                                             return "correct" === e;
                                         });
@@ -2030,7 +2030,7 @@ function random(seed) {
                                                     ""
                                                 ),
                                             void this.addToast(
-                                                "Not enough digits"
+                                                "No hay suficientes dígitos"
                                             )
                                         );
                                     this.evaluateRow();
@@ -2081,7 +2081,7 @@ function random(seed) {
                                 var e = this.$game.querySelector("game-modal"),
                                     a = document.createElement("game-stats");
                                 this.gameStatus === es &&
-                                    this.rowIndex <= 6 &&
+                                    this.rowIndex <= 10 &&
                                     a.setAttribute(
                                         "highlight-guess",
                                         this.rowIndex
@@ -2123,7 +2123,7 @@ function random(seed) {
                                         setTimeout(function () {
                                             return e.showHelpModal();
                                         }, 100);
-                                for (var a = 0; a < 6; a++) {
+                                for (var a = 0; a < 10; a++) {
                                     var s = document.createElement("game-row");
                                     s.setAttribute(
                                         "letters",
@@ -2152,7 +2152,7 @@ function random(seed) {
                                         function (a) {
                                             (e.$keyboard.letterEvaluations =
                                                 e.letterEvaluations),
-                                                e.rowIndex < 6 &&
+                                                e.rowIndex < 10 &&
                                                     (e.canInput = !0);
                                             var s =
                                                 e.$board.querySelectorAll(
@@ -2207,7 +2207,7 @@ function random(seed) {
                                                 case "hard-mode":
                                                     return void (n
                                                         ? e.addToast(
-                                                              "Hard mode can only be enabled at the start of a round",
+                                                              "El modo difícil solo puede activarse al inicio de una partida",
                                                               1500,
                                                               !0
                                                           )
@@ -3018,9 +3018,9 @@ function random(seed) {
             </style>
           
             <div class="container">
-              <h1>Statistics</h1>
+              <h1>Estadísticas</h1>
               <div id="statistics"></div>
-              <h1>Guess Distribution</h1>
+              <h1>Distribución de intentos</h1>
               <div id="guess-distribution"></div>
               <div class="footer"></div>
             </div>`;
@@ -3041,7 +3041,7 @@ function random(seed) {
             </div>`;
         var Is = document.createElement("template");
         Is.innerHTML = `<div class="countdown">
-              <h1>Next NUMBERLE</h1>
+              <h1>Siguiente NUMBERLE</h1>
               <div id="timer">
                 <div class="statistic-container">
                   <div class="statistic timer">
@@ -3053,7 +3053,7 @@ function random(seed) {
             <div class="buttons" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;">
                 <div class="share">
                     <button id="share-button">
-                        Share <game-icon icon="share"></game-icon>
+                        Compartir <game-icon icon="share"></game-icon>
                     </button>
                 </div>
                 <div class="share">
@@ -3061,12 +3061,12 @@ function random(seed) {
                 </div>
             </div>`;
         var Ms = {
-                currentStreak: "Current Streak",
-                maxStreak: "Max Streak",
-                winPercentage: "Win %",
-                gamesPlayed: "Played",
-                gamesWon: "Won",
-                averageGuesses: "Av. Guesses",
+                currentStreak: "Racha actual",
+                maxStreak: "Mejor racha",
+                winPercentage: "% Victorias",
+                gamesPlayed: "Jugadas",
+                gamesWon: "Ganadas",
+                averageGuesses: "Prom. intentos",
             },
             Os = (function (e) {
                 r(t, e);
@@ -3316,14 +3316,14 @@ function random(seed) {
                                                         }),
                                                         function () {
                                                             e.gameApp.addToast(
-                                                                "Copied results to clipboard",
+                                                                "Resultados copiados al portapapeles",
                                                                 2e3,
                                                                 !0
                                                             );
                                                         },
                                                         function () {
                                                             e.gameApp.addToast(
-                                                                "Share failed",
+                                                                "Error al compartir",
                                                                 2e3,
                                                                 !0
                                                             );
@@ -3491,12 +3491,12 @@ function random(seed) {
             </style>
             <section>
               <div class="instructions">
-                <p>Guess the <strong>NUMBERLE</strong> in 6 tries.</p>
-                <p>This is a silly adaptation of Josh Wardle's <strong><a href="https://www.powerlanguage.co.uk/wordle/" target="blank" title="@powerlanguish">Wordle</a></strong>.</p>
-                <p>Each guess must be a valid 5 digit number. Hit the enter button to submit.</p>
-                <p>After each guess, the color of the tiles will change to show how close your guess was to the number.</p>
+                <p>Adivina el <strong>NUMBERLE</strong> en 10 intentos.</p>
+                <p>Esta es una adaptación de <strong><a href="https://www.powerlanguage.co.uk/wordle/" target="blank" title="@powerlanguish">Wordle</a></strong> de Josh Wardle.</p>
+                <p>Cada intento debe ser un número válido de 5 dígitos. Presiona la tecla Enter para enviar.</p>
+                <p>Después de cada intento, el color de las casillas cambiará para mostrar qué tan cerca estuviste del número.</p>
                 <div class="examples">
-                  <p><strong>Examples</strong></p>
+                  <p><strong>Ejemplos</strong></p>
                   <div class="example">
                     <div class="row">
                       <game-tile letter="3" evaluation="correct" reveal></game-tile>
@@ -3505,7 +3505,7 @@ function random(seed) {
                       <game-tile letter="2"></game-tile>
                       <game-tile letter="0"></game-tile>
                     </div>
-                    <p>The digit <strong>3</strong> is in the number and in the correct spot.</p>
+                    <p>El dígito <strong>3</strong> está en el número y en la posición correcta.</p>
                   </div>
                   <div class="example">
                     <div class="row">
@@ -3515,7 +3515,7 @@ function random(seed) {
                       <game-tile letter="3"></game-tile>
                       <game-tile letter="7"></game-tile>
                     </div>
-                    <p>The digit <strong>I</strong> is in the number but in the wrong spot.</p>
+                    <p>El dígito <strong>1</strong> está en el número pero en la posición incorrecta.</p>
                   </div>
                   <div class="example">
                     <div class="row">
@@ -3525,10 +3525,10 @@ function random(seed) {
                       <game-tile letter="7" evaluation="absent" reveal></game-tile>
                       <game-tile letter="2"></game-tile>
                     </div>
-                    <p>The digit <strong>7</strong> is not in the number in any spot.</p>
+                    <p>El dígito <strong>7</strong> no está en el número en ninguna posición.</p>
                   </div>
                 </div>
-                <p><strong>A new NUMBERLE will be available each day!<strong></p>
+                <p><strong>¡Habrá un nuevo NUMBERLE cada día!<strong></p>
               </div>
             </section>`;
         var Hs = (function (e) {
