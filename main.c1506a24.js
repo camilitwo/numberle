@@ -1,3 +1,4 @@
+/* Creado por Camilo Gonzalez - https://www.dev-camilo-gonzalez.engineer */
 function shuffle(array, seed) {
     var m = array.length,
         t,
@@ -1428,7 +1429,7 @@ function random(seed) {
               </section>
             </div>
             <div id="footnote">
-              <a href="https://www.buymeacoffee.com/dduarte" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Cómprame un café" style="height: 60px !important;width: 217px !important;" ></a>
+              <a href="https://www.dev-camilo-gonzalez.engineer" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Cómprame un café" style="height: 60px !important;width: 217px !important;" ></a>
               <div id="copyright">Wordle es obra de Josh Wardle</div>
               <div>
                 <div id="puzzle-number"></div>
@@ -3030,7 +3031,7 @@ function random(seed) {
                     </button>
                 </div>
                 <div class="share">
-                    <a href="https://www.buymeacoffee.com/dduarte" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Cómprame un café" style="height: 42px !important;width: 152px !important;" ></a>
+                    <a href="https://www.dev-camilo-gonzalez.engineer" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Cómprame un café" style="height: 42px !important;width: 152px !important;" ></a>
                 </div>
             </div>`;
         var Ms = {
