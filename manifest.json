@@ -23,9 +23,10 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "https://dduarte.github.io/numberle/",
+  "start_url": "https://www.dev-camilo-gonzalez.engineer/",
   "background_color": "#a464aa",
   "display": "standalone",
   "theme_color": "#a464aa",
-  "description": "Un juego diario de números"
+  "description": "Un juego diario de números",
+  "author": "Camilo Gonzalez - https://www.dev-camilo-gonzalez.engineer"
 }
